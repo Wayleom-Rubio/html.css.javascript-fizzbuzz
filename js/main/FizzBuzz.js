@@ -19,7 +19,16 @@ class FizzBuzz {
     }
   
     getOutput(num) {
-        return null;
-    }
-  }
+    let str = "";
+            for(let i = 0; i <= num; i++){
+                if(this.isFizz(i)) str += "Fizz";
+                if(this.isBuzz(i)) str += "Buzz";
+                if(!this.isFizz(i) && !this.isBuzz(i)) str += i;
+                str += " ";
+            }
+            str.trim();
+            return str;
+        }
+ }
+
   
